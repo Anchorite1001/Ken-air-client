@@ -36,7 +36,7 @@ class Login extends Component {
         <h1>Login</h1>
         <label>First Name:</label>
         <input></input>
-        <button>Login</button>
+        <button onSubmit={this.saveSecret}>Login</button>
         <button>Logout</button>
       </div>
     )

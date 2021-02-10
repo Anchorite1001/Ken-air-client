@@ -1,13 +1,11 @@
 import React, {Component} from 'react'
 
-class ShortFlightInfo extends Component {
-  render() {
-    return(
-      <div>
-        Flight info coming soon
-      </div>
-    )
-  }
+const ShortFlightInfo = () => {
+  return(
+    <div>
+      <p></p>
+    </div>
+  )
 }
 
 export default ShortFlightInfo;

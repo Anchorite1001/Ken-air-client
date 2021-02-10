@@ -1,11 +1,19 @@
+import axios from 'axios'
 import React from "react";
-import Login from './Login'
+import PlaneCreate from './PlaneCreate';
+import Login from './Login';
+import Logout from './Logout';
+import FlightsList from './FlightsList';
+import BookSeatApp from './BookSeatApp';
+import SearchFlight from './SearchFlight'
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+
 
 function App() {
   return (
@@ -38,29 +46,39 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/login">
-            <Login/>
+            <Login />
           </Route>
 
           <Route path="/logout">
+            <Logout />
+          </Route>
+
+          <Route path="/airplanes">
             /* Your own Class*/
           </Route>
 
-          <Route path="airplanes">
-            /* Your own Class*/
+          <Route path="/flights">
+            <FlightsList />
           </Route>
 
-          <Route path="flights">
-            /* Your own Class*/
+          <Route path="/search">
+            <SearchFlight />
+          </Route>
+
+          <Route path="/flight/:id">
+            <BookSeatApp />
           </Route>
 
           <Route path="search">
-            /* Your own Class*/
+            <SearchFlight />
           </Route>
+
         </Switch>
       </div>
     </Router>
   );
 }
+
 
 
 export default App;
