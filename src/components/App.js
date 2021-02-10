@@ -1,11 +1,12 @@
-import axios from 'axios'
+import axios from 'axios';
 import React from "react";
 import PlaneCreate from './PlaneCreate';
 import Login from './Login';
 import Logout from './Logout';
 import FlightsList from './FlightsList';
 import BookSeatApp from './BookSeatApp';
-import SearchFlight from './SearchFlight'
+import SearchFlight from './SearchFlight';
+import PlaneLayout from './PlaneLayout';
 
 import {
   BrowserRouter as Router,
@@ -13,7 +14,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
 
 function App() {
   return (
@@ -38,6 +38,9 @@ function App() {
             </li>
             <li>
               <Link to="/search">Search</Link>
+            </li>
+            <li>
+              <Link to="/PlaneLayout">Search</Link>
             </li>
           </ul>
         </nav>
@@ -70,6 +73,10 @@ function App() {
           </Route>
 
           <Route path="search">
+            <SearchFlight />
+          </Route>
+
+          <Route path="PlaneLayout">
             <SearchFlight />
           </Route>
 
