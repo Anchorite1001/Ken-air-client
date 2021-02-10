@@ -5,6 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import FlightsList from './FlightsList'
+import SearchFlight from './SearchFlight'
 
 function App() {
   return (
@@ -48,12 +50,12 @@ function App() {
             /* Your own Class*/
           </Route>
 
-          <Route path="flights">
-            /* Your own Class*/
+          <Route path="/flights">
+            <FlightsList />
           </Route>
 
-          <Route path="search">
-            /* Your own Class*/
+          <Route path="/search">
+            <SearchFlight />
           </Route>
         </Switch>
       </div>
@@ -61,5 +63,6 @@ function App() {
   );
 }
 
+//todo: add plane&seat; change flightnumber into link for book seat.
 
 export default App;
