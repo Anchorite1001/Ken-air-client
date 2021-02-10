@@ -58,25 +58,23 @@ function App() {
           <Route path="/flights">
             <FlightsList />
           </Route>
-
-<<<<<<< HEAD
           <Route path="/search">
             <SearchFlight />
-=======
+
           <Route path="flight/:id">
             <BookSeatApp />
           </Route>
 
           <Route path="search">
-            /* Your own Class*/
->>>>>>> d155b7cb35502fa0a6ca39a80f40a5011f18c8fc
+            <SearchFlight />
           </Route>
+
         </Switch>
       </div>
     </Router>
   );
 }
 
-//todo: add plane&seat; change flightnumber into link for book seat.
+
 
 export default App;
