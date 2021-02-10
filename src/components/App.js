@@ -57,6 +57,10 @@ function App() {
             /* Your own Class*/
           </Route>
 
+          <Route path="flight/:id">
+            <BookSeatApp />
+          </Route>
+
           <Route path="search">
             /* Your own Class*/
           </Route>
