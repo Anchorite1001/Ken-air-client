@@ -10,4 +10,4 @@ class SelectSeatBoard extends Component {
   }
 }
 
-export default SelectSeatBoard
+// export default SelectSeatBoard
