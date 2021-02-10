@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import axios from 'axios'
 import PlaneCreate from './PlaneCreate'
-=======
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -9,7 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
->>>>>>> 10facae392888ae1f2d7f616163a859311e8dad8
+import BookSeatApp from './BookSeatApp'
 
 function App() {
   return (
