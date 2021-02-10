@@ -7,7 +7,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
+import FlightsList from './FlightsList'
+import SearchFlight from './SearchFlight'
 import BookSeatApp from './BookSeatApp'
+
 
 function App() {
   return (
@@ -52,21 +56,26 @@ function App() {
           </Route>
 
           <Route path="/flights">
-            /* Your own Class*/
+            <FlightsList />
           </Route>
+
+          <Route path="/search">
+            <SearchFlight />
 
           <Route path="/flight/:id">
             <BookSeatApp />
           </Route>
 
-          <Route path="/search">
-            /* Your own Class*/
+          <Route path="search">
+            <SearchFlight />
           </Route>
+
         </Switch>
       </div>
     </Router>
   );
 }
+
 
 
 export default App;
