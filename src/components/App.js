@@ -1,12 +1,11 @@
-import axios from 'axios'
+import axios from 'axios';
 import React from "react";
 import PlaneCreate from './PlaneCreate';
 import Login from './Login';
 import Logout from './Logout';
 import FlightsList from './FlightsList';
 import BookSeatApp from './BookSeatApp';
-import SearchFlight from './SearchFlight'
-
+import SearchFlight from './SearchFlight';
 
 import {
   BrowserRouter as Router,
@@ -14,7 +13,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
 
 function App() {
   return (
