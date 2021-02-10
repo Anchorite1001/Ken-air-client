@@ -4,8 +4,8 @@ function BookSeatApp() {
   return (
     <div>
       <ShortFlightInfo />
-      <SeatBoard />
-      <SelectingBoard />
+      <SeatsBoard />
+      <SelectSeatBoard />
     </div>
   )
 }

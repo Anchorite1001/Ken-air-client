@@ -1,3 +1,5 @@
+import axios from 'axios'
+import PlaneCreate from './PlaneCreate'
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -5,8 +7,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 import FlightsList from './FlightsList'
 import SearchFlight from './SearchFlight'
+import BookSeatApp from './BookSeatApp'
+
 
 function App() {
   return (
@@ -54,8 +59,17 @@ function App() {
             <FlightsList />
           </Route>
 
+<<<<<<< HEAD
           <Route path="/search">
             <SearchFlight />
+=======
+          <Route path="flight/:id">
+            <BookSeatApp />
+          </Route>
+
+          <Route path="search">
+            /* Your own Class*/
+>>>>>>> d155b7cb35502fa0a6ca39a80f40a5011f18c8fc
           </Route>
         </Switch>
       </div>
