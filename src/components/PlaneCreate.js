@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PlaneLayout from './PlaneLayout';
 import axios from 'axios';
+import PlaneVisual from './PlaneVisual';
 
 const SERVER_URL = 'http://localhost:3000/airplanes.json';
 
@@ -31,6 +32,7 @@ class PlaneCreate extends Component {
       <div>
       <h2>Create a new airplane</h2>
         <PlaneLayout onSubmit={this.saveAirplane} />
+        <PlaneVisual />
       </div>
     )
   }

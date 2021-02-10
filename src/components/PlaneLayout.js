@@ -29,9 +29,9 @@ class PlaneLayout extends Component {
 
   _handleSubmit(event) {
     event.preventDefault(); //prevent form being submitted
-    this.props.onSubmit(this.state.name)
+    this.props.onSubmit(this.state.name);
     this.props.onSubmit(this.state.cols);
-    this.props.onSubmit(this.state.rows)
+    this.props.onSubmit(this.state.rows);
   }
 
   render() {
