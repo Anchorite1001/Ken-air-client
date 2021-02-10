@@ -41,7 +41,7 @@ class Row extends Component {
   }
 }
 
-class Plane extends Component {
+class PlaneLayout extends Component {
   render() {
     return (
       <div className="plane">
