@@ -1,5 +1,5 @@
 import axios from 'axios'
-import PlaneCreate from './PlaneCreate'
+// import PlaneCreate from './PlaneCreate'
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -47,19 +47,19 @@ function App() {
             /* Your own Class*/
           </Route>
 
-          <Route path="airplanes">
+          <Route path="/airplanes">
             /* Your own Class*/
           </Route>
 
-          <Route path="flights">
+          <Route path="/flights">
             /* Your own Class*/
           </Route>
 
-          <Route path="flight/:id">
+          <Route path="/flight/:id">
             <BookSeatApp />
           </Route>
 
-          <Route path="search">
+          <Route path="/search">
             /* Your own Class*/
           </Route>
         </Switch>

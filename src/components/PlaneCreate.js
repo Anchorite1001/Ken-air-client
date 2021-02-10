@@ -40,4 +40,4 @@ class Seat extends React.Component {
   }
 }
 
-export default PlaneCreate;
+// export default PlaneCreate;
