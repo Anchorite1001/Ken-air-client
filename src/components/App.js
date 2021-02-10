@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-=======
-import axios from 'axios'
-// import PlaneCreate from './PlaneCreate'
->>>>>>> b4dbf76a3975e32a0c15bf81c6790a54fc701299
+import axios from 'axios';
+// import PlaneCreate from './PlaneCreate';
 import React from "react";
 import PlaneCreate from './PlaneCreate';
 import Login from './Login';
 import Logout from './Logout';
 import FlightsList from './FlightsList';
-import BookSeatApp from './BookSeatApp';
+import BookSeat from './BookSeatApp';
+import SearchFlight from './SearchFlight';
 
 
 import {
@@ -17,14 +15,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-<<<<<<< HEAD
-=======
 
-import FlightsList from './FlightsList'
-import SearchFlight from './SearchFlight'
-import BookSeatApp from './BookSeatApp'
-
->>>>>>> b4dbf76a3975e32a0c15bf81c6790a54fc701299
 
 function App() {
   return (
@@ -65,13 +56,6 @@ function App() {
           </Route>
 
           <Route path="/airplanes">
-<<<<<<< HEAD
-            <PlaneCreate />
-          </Route>
-
-          <Route path="flight/:id">
-            /* <BookSeatApp /> */
-=======
             /* Your own Class*/
           </Route>
 
@@ -81,12 +65,9 @@ function App() {
 
           <Route path="/search">
             <SearchFlight />
-          </Route>  
-
-          <Route path="/flight/:id">
-            <BookSeatApp />
->>>>>>> b4dbf76a3975e32a0c15bf81c6790a54fc701299
           </Route>
+
+          <Route path="/flight/:id" component={BookSeat} />
 
           <Route path="search">
             <SearchFlight />
