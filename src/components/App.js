@@ -58,8 +58,10 @@ function App() {
           <Route path="/flights">
             <FlightsList />
           </Route>
+
           <Route path="/search">
             <SearchFlight />
+          </Route>  
 
           <Route path="flight/:id">
             <BookSeatApp />
