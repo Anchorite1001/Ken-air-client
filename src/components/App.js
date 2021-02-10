@@ -37,19 +37,23 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/login">
-            <About />
+            /* Your own Class*/
           </Route>
+
           <Route path="/logout">
-            <Users />
+            /* Your own Class*/
           </Route>
+
           <Route path="airplanes">
-            <Home />
+            /* Your own Class*/
           </Route>
+
           <Route path="flights">
-            <Home />
+            /* Your own Class*/
           </Route>
+
           <Route path="search">
-            <Home />
+            /* Your own Class*/
           </Route>
         </Switch>
       </div>
