@@ -61,6 +61,7 @@ function App() {
 
           <Route path="/search">
             <SearchFlight />
+          </Route>  
 
           <Route path="/flight/:id">
             <BookSeatApp />
