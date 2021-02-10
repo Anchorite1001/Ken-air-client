@@ -52,7 +52,10 @@ class BookSeatApp extends Component {
       })
     }
     fetchFlight();
+    // this.sayHi = this.sayHi.bind(this)
   }
+
+  sayHi = (seat_id) => console.log('Hi ' + seat_id + " is clicked");
 
   render() {
     return (
@@ -64,7 +67,7 @@ class BookSeatApp extends Component {
           destination={this.state.destination}
           date={this.state.date}
         />
-        <SeatsBoard flight_id={this.state.flight_id} rows='6' cols='4'/>
+        <SeatsBoard flight_id={this.state.flight_id} rows='6' cols='4' onClick={this.sayHi}/>
         <SelectSeatBoard />
       </div>
     )
