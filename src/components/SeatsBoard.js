@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 
 class SeatsBoard extends Component {
   render() {
@@ -10,4 +10,4 @@ class SeatsBoard extends Component {
   }
 }
 
-export default SeatsBoard
+// export default SeatsBoard;
