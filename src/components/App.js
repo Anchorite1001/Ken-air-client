@@ -1,15 +1,17 @@
-<<<<<<< HEAD
-import axios from 'axios'
-import PlaneCreate from './PlaneCreate'
-=======
 import React from "react";
+import PlaneCreate from './PlaneCreate';
+import Login from './Login';
+import Logout from './Logout';
+import FlightsList from './FlightsList';
+import BookSeatApp from './BookSeatApp';
+
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
->>>>>>> 10facae392888ae1f2d7f616163a859311e8dad8
 
 function App() {
   return (
@@ -42,19 +44,19 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/login">
-            /* Your own Class*/
+            <Login />
           </Route>
 
           <Route path="/logout">
-            /* Your own Class*/
+            <Logout />
           </Route>
 
-          <Route path="airplanes">
-            /* Your own Class*/
+          <Route path="/airplanes">
+            <PlaneCreate />
           </Route>
 
-          <Route path="flights">
-            /* Your own Class*/
+          <Route path="flight/:id">
+            /* <BookSeatApp /> */
           </Route>
 
           <Route path="search">
