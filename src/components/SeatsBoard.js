@@ -32,6 +32,8 @@ function Board(props) {
 }
 
 
+
+
 class SeatsBoard extends Component {
   constructor(props) {
     super(props);
