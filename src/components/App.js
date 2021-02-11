@@ -56,7 +56,7 @@ function App() {
           </Route>
 
           <Route path="/airplanes">
-            /* Your own Class*/
+            <PlaneCreate />
           </Route>
 
           <Route path="/flights">

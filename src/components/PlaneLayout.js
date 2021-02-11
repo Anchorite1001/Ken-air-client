@@ -24,7 +24,7 @@ class PlaneLayout extends Component {
 
   _handleRowsInput(event) {
     this.setState({rows: event.target.value});
-    return <Seat value={i} />;
+    // return <Seat value={i} />;
   }
 
 
@@ -35,9 +35,7 @@ class PlaneLayout extends Component {
 
   _handleSubmit(event) {
     event.preventDefault(); //prevent form being submitted
-    this.props.onSubmit(this.state.name);
-    this.props.onSubmit(this.state.cols);
-    this.props.onSubmit(this.state.rows);
+    this.props.onSubmit(this.state);
 
 }
 
@@ -56,6 +54,6 @@ class PlaneLayout extends Component {
       </div>
     );
   }
-}	
-//
-// export default PlaneLayout;
+}
+
+export default PlaneLayout;

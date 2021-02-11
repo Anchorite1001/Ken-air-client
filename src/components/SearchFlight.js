@@ -5,7 +5,6 @@ import SearchResults from './SearchResults'
 
 const SERVER_URL = 'http://localhost:3000/flights.json'
 
-
 class SearchFlight extends Component {
   constructor() {
     super();
@@ -37,5 +36,8 @@ class SearchFlight extends Component {
         <SearchForm onSubmit = {this.flightSearch}/>
         <SearchResults results = {this.state.results}/>
       </div>
-    )	    
+    )
   }
+}
+
+export default SearchFlight;

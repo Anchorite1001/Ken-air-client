@@ -5,9 +5,7 @@ import PlaneVisual from './PlaneVisual';
 
 const SERVER_URL = 'http://localhost:3000/airplanes.json';
 
-
-
-class PlaneCreate extends Component {	
+class PlaneCreate extends Component {
   constructor() {
     super();
     this.state = {
@@ -18,6 +16,7 @@ class PlaneCreate extends Component {
   }
 
   saveAirplane(object) {
+    console.log(object);
       axios.post(SERVER_URL, {name: object.name, rows: object.rows, cols: object.cols}).then((response) => {
         console.log(response.data);
         console.log(response.status);
