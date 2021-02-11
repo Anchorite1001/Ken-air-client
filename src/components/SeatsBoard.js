@@ -6,11 +6,7 @@ import '../index.css';
 function Square(props) {
   return (
     <button
-<<<<<<< HEAD
-      className="square"
-=======
       // className="square"
->>>>>>> 7ca22a4f29c815de943116c421b01c3699b8080a
       onClick={() => props.seat.onClick(props.seat.id)}>
       {props.seat.id}
     </button>
@@ -49,22 +45,8 @@ class SeatsBoard extends Component {
     console.log(props.cols);
   }
 
-<<<<<<< HEAD
-  // _handleClick(i) {
-  //   const allSeats = this.state.allSeats.slice();
-  //   if (calculateWinner(squares) || squares[i]) {
-  //     return;
-  //   }
-  //   squares[i] = this.state.xIsNext ? 'X' : 'O';
-  //   this.setState({
-  //     squares: squares,
-  //     xIsNext: !this.state.xIsNext,
-  //   });
-  // }
-=======
   _handleClick(i) {
   }
->>>>>>> 7ca22a4f29c815de943116c421b01c3699b8080a
 
   GenerateBoard(rows, cols, flight_id) {
     const generateLettersArray = (numOfLetters) => {
@@ -74,17 +56,6 @@ class SeatsBoard extends Component {
     const colArray = generateLettersArray(parseInt(cols));
     const rowArray = [...Array(parseInt(rows)).keys()].map(x => ++x);
 
-<<<<<<< HEAD
-  GenerateBoard(rows, cols, flight_id) {
-    const generateLettersArray = (numOfLetters) => {
-      const allLetters = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
-      return allLetters.slice(0, numOfLetters);
-    }
-    const colArray = generateLettersArray(parseInt(cols));
-    const rowArray = [...Array(parseInt(rows)).keys()].map(x => ++x);
-
-=======
->>>>>>> 7ca22a4f29c815de943116c421b01c3699b8080a
     const allSeats = [];
     console.log(this.props);
     rowArray.forEach((number) => {
@@ -100,11 +71,7 @@ class SeatsBoard extends Component {
       })
       allSeats.push(rowArray);
     });
-<<<<<<< HEAD
-
-=======
     console.log(allSeats);
->>>>>>> 7ca22a4f29c815de943116c421b01c3699b8080a
     return allSeats;
   }
 
