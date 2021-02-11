@@ -40,7 +40,7 @@ class FlightsList extends Component {
               return(
                 <tr key = {f.id}>
                   <td>{f.date}</td>
-                  <td><a href = {"/flight/" + f.id }> {f.flight_number} </a></td>
+                  <td>{f.flight_number}</td>
                   <td>{f.origin}</td>
                   <td>{f.destination}</td>
                 </tr>
