@@ -1,58 +1,61 @@
 import React, {Component} from 'react';
 
-class Seat extends Component {
-  render() {
-    return (
-      <button className="seat">
-        {this.props.value}
-      </button>
-    );
-  }
-}
 
-class Row extends Component {
-  renderSeat(i) {
+class PlaneLayout extends Component {
+  constructor(){
+    super();
+    this.state = {
+      name: '',
+      rows: '',
+      cols: ''
+    };
+
+    this._handleNameInput = this._handleNameInput.bind(this);
+    this._handleRowsInput = this._handleRowsInput.bind(this);
+    this._handleColsInput = this._handleColsInput.bind(this);
+    this._handleSubmit = this._handleSubmit.bind(this);
+  }
+
+  _handleNameInput(event) {
+    this.setState({name: event.target.value});
+  }
+
+
+
+  _handleRowsInput(event) {
+    this.setState({rows: event.target.value});
     return <Seat value={i} />;
   }
 
-  render() {
-    const status = 'Next player: X';
 
+  _handleColsInput(event) {
+    this.setState({cols: event.target.value});
+  }
+
+
+  _handleSubmit(event) {
+    event.preventDefault(); //prevent form being submitted
+    this.props.onSubmit(this.state.name);
+    this.props.onSubmit(this.state.cols);
+    this.props.onSubmit(this.state.rows);
+
+}
+
+
+
+  render() {
     return (
       <div>
-        <div className="status">{status}</div>
-        <div className="seat-row">
-          {this.renderSeat(0)}
-          {this.renderSeat(1)}
-          {this.renderSeat(2)}
-        </div>
-        <div className="seat-row">
-          {this.renderSeat(3)}
-          {this.renderSeat(4)}
-          {this.renderSeat(5)}
-        </div>
-        <div className="seat-row">
-          {this.renderSeat(6)}
-          {this.renderSeat(7)}
-          {this.renderSeat(8)}
-        </div>
+        <p>Enter the name of the airplane, followed by the seating rows and columns:</p>
+        <form onSubmit={ this._handleSubmit }>
+          <input type="text" placeholder= 'Aircraft Name' required onInput={this._handleNameInput}/>
+          <input type="number" placeholder='rows' required onInput={this._handleRowsInput}/>
+          <input type="number" placeholder='columns' required onInput={ this._handleColsInput }/>
+          <button>Create new aircraft</button>
+        </form>
       </div>
     );
   }
-}
-
-class Plane extends Component {
-  render() {
-    return (
-      <div className="plane">
-        <div className="plane-board">
-          <Row />
-        </div>
-        <div className="plane-info">
-        </div>
-      </div>
-    );
-  }
-}
-
+}	
+//
 // export default PlaneLayout;
